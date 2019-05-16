@@ -2,4 +2,5 @@
     <string name="app_name">Admin</string>
     <string name="welcome_to_admin_panel">Welcome To Admin Panel</string>
     <string name="login">Login</string>
+    <string name="add_products">Add Products</string>
 </resources>

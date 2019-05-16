@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminCategory">
+
+
+    <TextView
+        android:id="@+id/admintext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/add_products"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.102" />
+
+    <LinearLayout
+        android:id="@+id/linearcategory"
+        android:layout_width="match_parent"
+        android:layout_height="119dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/admintext"
+        app:layout_constraintVertical_bias="0.109">
+
+        <ImageView
+            android:id="@+id/tShirts"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:src="@drawable/tshirts" />
+
+        <ImageView
+            android:id="@+id/sports"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sports" />
+
+        <ImageView
+            android:id="@+id/fDresses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/female_dresses" />
+
+        <ImageView
+            android:id="@+id/sweater"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sweather" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear2category"
+        android:layout_width="match_parent"
+        android:layout_height="119dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearcategory"
+        app:layout_constraintVertical_bias="0.109">
+
+        <ImageView
+            android:id="@+id/glasses"
+            android:layout_width="84dp"
+            android:layout_height="80dp"
+            android:src="@drawable/glasses" />
+
+        <ImageView
+            android:id="@+id/hats"
+            android:layout_width="84dp"
+            android:layout_height="80dp"
+            android:src="@drawable/hats" />
+
+        <ImageView
+            android:id="@+id/shoes"
+            android:layout_width="84dp"
+            android:layout_height="80dp"
+            android:src="@drawable/shoess" />
+
+        <ImageView
+            android:id="@+id/purse"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/purses_bags" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear3category"
+        android:layout_width="match_parent"
+        android:layout_height="119dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear2category"
+        app:layout_constraintVertical_bias="0.109">
+
+        <ImageView
+            android:id="@+id/headphone"
+            android:layout_width="84dp"
+            android:layout_height="80dp"
+            android:src="@drawable/headphoness" />
+
+        <ImageView
+            android:id="@+id/laptop"
+            android:layout_width="84dp"
+            android:layout_height="80dp"
+            android:src="@drawable/laptops" />
+
+        <ImageView
+            android:id="@+id/mobiles"
+            android:layout_width="84dp"
+            android:layout_height="80dp"
+            android:src="@drawable/mobiles" />
+
+        <ImageView
+            android:id="@+id/watches"
+            android:layout_width="84dp"
+            android:layout_height="80dp"
+            android:src="@drawable/watches" />
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
