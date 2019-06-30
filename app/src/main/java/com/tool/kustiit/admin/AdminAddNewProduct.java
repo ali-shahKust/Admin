@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -50,6 +51,11 @@ public class AdminAddNewProduct extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_add_new_product);
+
+        getWindow().setFlags(
+                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN
+        );
 
 
         addProductbtn = (Button)findViewById(R.id.addProductBtn);
@@ -204,14 +210,14 @@ public class AdminAddNewProduct extends AppCompatActivity {
     private void SaveProductInfo() {
 
         HashMap<String , Object> hashMap = new HashMap<>();
-        hashMap.put("PID" , ProductRandomKey);
-        hashMap.put("Date" , saveCurrentDate);
-        hashMap.put("Time", saveCurrentTime);
-        hashMap.put("Description" , Description);
+        hashMap.put("pid" , ProductRandomKey);
+        hashMap.put("date" , saveCurrentDate);
+        hashMap.put("time", saveCurrentTime);
+        hashMap.put("description" , Description);
         hashMap.put("image", downloadImgUrl);
-        hashMap.put("Catergory", CategoryName);
-        hashMap.put("Price", Price);
-        hashMap.put("Product Name" , Name);
+        hashMap.put("catergory", CategoryName);
+        hashMap.put("price", Price);
+        hashMap.put("productName" , Name);
 
         mRootRef.child(ProductRandomKey).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override

@@ -4,8 +4,8 @@
     package="com.tool.kustiit.admin">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -15,16 +15,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".AddNewOrder"></activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".HomeAdmin">
+        <activity android:name=".AdminCategory">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AdminCategory" />
-        <activity android:name=".AdminAddNewProduct"></activity>
+        <activity android:name=".AdminAddNewProduct" />
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_homr"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>
