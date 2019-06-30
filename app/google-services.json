@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "70113546011-opfpumc12sb2ban1d4tdr0lpgj6pfo71.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tool.kustiit.admin",
+            "certificate_hash": "29f80e0b48c77f1cfc180f4b0590a7bc656c9863"
+          }
+        },
+        {
           "client_id": "70113546011-oaa1uc0rcolh2n1nvu87pgfgeh79bau5.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -51,6 +59,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "70113546011-41svad22sbc1r16gf1n41haihhjrmcte.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tool.kustiit.myshop",
+            "certificate_hash": "29f80e0b48c77f1cfc180f4b0590a7bc656c9863"
+          }
+        },
         {
           "client_id": "70113546011-l63cs5bi24c7mloe2stnlkvfifs70dim.apps.googleusercontent.com",
           "client_type": 1,

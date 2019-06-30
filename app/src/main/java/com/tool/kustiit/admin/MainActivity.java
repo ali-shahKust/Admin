@@ -22,6 +22,7 @@ import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.tool.kustiit.admin.Model.Users;
 
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
@@ -69,8 +70,14 @@ public class MainActivity extends AppCompatActivity {
         PhoneAuthProvider auth = PhoneAuthProvider.getInstance();
 
         auth.verifyPhoneNumber(phone.getText().toString(), 60, TimeUnit.SECONDS, MainActivity.this, new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+
+
+
             @Override
             public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
+
+
+                Users.user_number = phone.getText().toString();
                 FirebaseAuth.getInstance().signInWithCredential(phoneAuthCredential).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -79,9 +86,8 @@ public class MainActivity extends AppCompatActivity {
                         final String uID = mUser.getUid();
                         System.err.println("User id is " + uID);
 
-
                         if(task.isSuccessful()){
-                            DatabaseReference userRef = FirebaseDatabase.getInstance().getReference().child("Admin").child(uID);
+                            DatabaseReference userRef = FirebaseDatabase.getInstance().getReference().child("Admins").child(uID);
                             HashMap<String, Object> user_map = new HashMap<>();
 
                             user_map.put("user_number", phone.getText().toString());
@@ -97,6 +103,15 @@ public class MainActivity extends AppCompatActivity {
                         else {
                             task.getException();
                         }
+//
+//                        HashMap<String, Object> userMap = new HashMap<>();
+//                        userMap.put("user_number" , number.getText().toString());
+
+//                        Toast.makeText(LoginActivity.this, "logged in", Toast.LENGTH_SHORT).show();
+//                        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+//                        startActivity(intent);
+//                        finish();
+//                        loadingbar.dismiss();
 
 
                     }
@@ -105,10 +120,10 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onVerificationFailed(FirebaseException e) {
-
+                Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
                 Log.i("dxdiag", e.getMessage());
-
             }
         });
     }
+
 }

@@ -73,7 +73,13 @@ public class AdminCategory extends AppCompatActivity {
 
             }
         });
-
+        checkOrderBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AdminCategory.this , AddNewOrder.class);
+                startActivity(intent);
+            }
+        });
 
         //Onclick Listen Tshirt
 
